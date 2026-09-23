@@ -70,7 +70,7 @@ var arrayObjct = [item1,item2,item3,...,itemN]
 //     i++
 // }
 //    while(i<array.length)
-    
+
 
 // accessing array element using for in loop
 // for(let i in array){
@@ -105,7 +105,7 @@ splice(): used to insert or delete element form any specific position of array a
 
 deleted : it  deleted an  item  from array and leave empty space
 */
-var array = [10,20,30,40,50,60,70,80,90,100]
+// var array = [10,20,30,40,50,60,70,80,90,100]
 // array.push(110)
 // console.log(array)
 // array.push(120)
@@ -183,24 +183,98 @@ var array = [10,20,30,40,50,60,70,80,90,100]
 //     console.log(i)
 // }
 // includes(): return true if array contains an  item else return flase
-var array = [10,20,30,40,50,60,70,80,90,100]
-console.log(array.includes(40)) 
-console.log(array.includes(400)) 
+// var array = [10,20,30,40,50,60,70,80,90,100]
+// console.log(array.includes(40)) 
+// console.log(array.includes(400)) 
 
 //indexof(): return Lowest index of item from array and return -1 if item not found in array 
-var array = [10,20,30,40,50,60,70,80,90,100]
-console.log(array.indexOf(40)) 
-console.log(array.indexOf(400)) 
+// var array = [10,20,30,40,50,60,70,80,90,100]
+// console.log(array.indexOf(40)) 
+// console.log(array.indexOf(400)) 
 
 //lastIndexOf(): return last index of item from array and return -1 if item not found in array
-var array = [10,20,30,40,50,60,70,80,90,100]
-console.log(array.lastIndexOf(60)) 
-console.log(array.lastIndexOf(400)) 
+// var array = [10,20,30,40,50,60,70,80,90,100]
+// console.log(array.lastIndexOf(60)) 
+// console.log(array.lastIndexOf(400)) 
 
 
 // reverse
-console.log(array)
-array.reverse()
-console.log(array)
+// console.log(array)
+// array.reverse()
+// console.log(array)
 
 
+// find() : return the first item from array which pass a test, otherwise return undefined
+// findlast(): return the last item from array which pass a test , otherwise return undefined
+//findindex(): return the first index of item from array which pass a test, else return-1
+// find lastindex(): return the last index of item from array which pass a test, else return-1
+//map()     : return an array of containg result for all element of array
+// filter() : return an array of item that pass a test
+
+// var array = [10, 11, 12, 13, 14, 15, 15, 15, 15, 16, 17, 17, 17, 17, 18, 18, 19, 19, 20, 20, 20, 25, 25, 30, 30, 30]
+
+// function check(items){
+//     return items
+    // return items %3
+// }
+// console.log(array.find(check))
+// console.log(array.findLast(check))
+// console.log(array.findIndex(check))
+// console.log(array.findLastIndex(check))
+// console.log(array.filter(check))
+// console.log(array.map(check))
+
+// console.log(array.find((items)=>items%2==0))
+// console.log(array.findLast((items)=>items%2==0))
+// console.log(array.findIndex((items)=>items%2==0))
+// console.log(array.findLastIndex((items)=>items%2==0))
+// console.log(array.filter((items)=>items%2==0))
+// console.log(array.map((items)=>items%2==0))
+
+// var array = [109, 191, 122, 183, 143, 155, 315, 195, 185, 176, 167, 17, 157, 179, 118, 138, 149, 169, 270, 230, 250, 295, 255, 350, 350, 307]
+// forEach : call callback function for each element,doesn't return anything
+    // array.forEach((x,index) => console.log(index,x))
+// var sum = 0
+// array.forEach((x =>sum = sum + x))
+// console.log(sum)
+
+// reduce : calls the specified callabck function for all elements in an array. The return value of the 
+// callback function is the accumlated result, and is provide as an argument in the next call to the
+//  callback function
+// console.log(array.reduce((prevoiu ,current) => prevoiu + current))
+// some() : return true if least one item pass the test.
+// console.log(array.some(a => a%20==0))
+// console.log(array.some(a => a%200==0))
+
+// sort()
+// var a = ["Vidya","Sagar", "Shukla", "Ishwar", "Chandra","Krishna","Bihari","Shivansh","Sonal","Joyti","Kajal","Gudiya","Sneha"]
+// console.log(a)
+// a.sort()
+// array.sort((x,y)=> x-y)
+// array.sort((x,y)=> y-x)
+// console.log(a)
+
+// Array Destructing i.e unpacking array element into variales
+
+// var data = [1001,"Vidya Sagar", "Student",156700,"Noida","U.P"]
+// console.log(`
+//     id            : ${data[0]}
+//     name          : ${data[1]}
+//     Degination    : ${data[2]}
+//     salary        : ${data[3]}
+//     Address       : ${data[4]}
+//     State         : ${data[5]}
+    
+// `)
+
+// var [id,name, dsg,salary,addess,state] = data
+// console.log(`
+//     id            : ${id}
+//     name          : ${name}
+//     Degination    : ${dsg}
+//     salary        : ${salary}
+//     Address       : ${addess}
+//     State         : ${state}
+    
+// `)
+    
