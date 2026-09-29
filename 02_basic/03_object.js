@@ -137,7 +137,7 @@ Obeject  -> Stroe information in pair of key and value
 //         this.ma = 1000
 //     this.gross = this.ta + this.da + this.hra + this.ma
 //         if(this.gross>100000)
-//             this.tax = this.gross*10/100
+//             this.itax = this.gross*10/100
 
 //         else
 //             itax =0 
@@ -196,14 +196,14 @@ called function call overhead problem.
 
 // Object destrctuing
 
-var emp = {
-    id  : 11000,
-    name : "VidyaSagar ",
-    dsg : "Tariner",
-    salary : 3456789,
-    city : "Noida",
-    State : "UP"
-}
+// var emp = {
+//     id  : 11000,
+//     name : "VidyaSagar ",
+//     dsg : "Tariner",
+//     salary : 3456789,
+//     city : "Noida",
+//     State : "UP"
+// }
 
 // console.log(`
 //     Employee Id  :    ${emp.id}
@@ -213,13 +213,116 @@ var emp = {
 //     State        :    ${emp.State}
 //     `)
 
-    var {id,name,dsg,city,State} = emp
+    // var {id,name,dsg,city,State} = emp
 
-    console.log(`
-    Employee Id  :    ${id}
-    name         :    ${name}
-    Desgination  :    ${dsg}
-    City         :    ${city}
-    State        :    ${State}
-    `)
+    // console.log(`
+    // Employee Id  :    ${id}
+    // name         :    ${name}
+    // Desgination  :    ${dsg}
+    // City         :    ${city}
+    // State        :    ${State}
+    // `)
 
+    // Object constructor
+
+    // var Employee = function(id,name, dsg,salary,city, state){
+    //     this.id = id
+    //     this.name = name
+    //     this.dsg = dsg
+    //     this.salary = salary
+    //     this.city = city
+    //     this.state = state
+    // }
+    // var emp1 = new Employee(10001, "Vidya Sagar","Trainer",56788,"Noida","UP")
+    // var emp2 = new Employee(10002,"Aditya Saini","Trainer",45678,"Azamgrah","UP")
+    // var emp3 = new Employee(10003,"Ankush Gupta","Trainer",4567812345678,"mau","UP")
+
+    // console.log(emp1)
+    // console.log(emp2)
+    // console.log(emp3)
+
+// Prototype:-
+/* Object prototype : Every object in JavaScript has a built-in property, which is
+ called its prototype .The prototype is itself are not direct propertities of object of itself and we prototype 
+ is shareble with other object so basically prototype element are common to objects. */
+
+
+//  var Employee = function(id,name, dsg,salary,city, state){
+//         this.id = id
+//         this.name = name
+//         this.dsg = dsg
+//         this.salary = salary
+//         this.city = city
+//         this.state = state
+//     }
+//     Employee.prototype.cmp = "Ducat"
+//     Employee.prototype.display = function(){
+//         console.log(`
+//             Employee ID         :       ${this.id}
+//             Name                :       ${this.name}
+//             Desgination         :       ${this.dsg}
+//             Salary              :       ${this.salary}
+//             City                :       ${this.city}
+//             State               :       ${this.state}
+//             `)
+//     }
+//     var emp1 = new Employee(10001, "Vidya Sagar","Trainer",56788,"Noida","UP")
+//     var emp2 = new Employee(10002,"Aditya Saini","Trainer",45678,"Azamgrah","UP")
+//     var emp3 = new Employee(10003,"Ankush Gupta","Trainer",4567812345678,"mau","UP")
+
+//     emp1.display()
+//     emp2.display()
+//     emp3.display()
+
+// object Built-in Method 
+// 1. Object.keys() : return an array containining all keys of objects.
+// 2. Object.value() : return an array containint all value of objects.
+// 3. Object.entries() : return an array containig key value of objects.
+
+var emp = {
+    id : 1001,
+    name : "Vidya Sagar",
+    dsg : "Trainer",
+    salary : "456789",
+    city : "Noida",
+    state : "UP"
+}
+// console.log(Object.values(emp))
+// console.log(Object.keys(emp))
+// console.log(Object.entries(emp))
+
+// 4. objects.assign() : used to copy an object elemets into other
+
+// var obj = {}'
+// Object.assign(obj,emp)
+// console.log(obj)
+
+// 5. objectl.create() : used to create a new objects, it makes already existing object as prototype of newly create object
+
+// var obj = Object.create(emp)
+// console.log(obj)
+// console.log(Object.getPrototypeOf(obj))
+// console.log(obj.id)
+// console.log(obj.city)
+
+// 6.Object isFrezes() : Check whether  an object is freeze or not 
+// 7. Object freezes() : freezes an object present propreties to be add,delete or update
+
+// Object.freeze(emp)
+// console.log(Object.isFrozen(emp))
+// emp.email = "abc@gmail.com"
+// emp.city = "Faridabad",
+// delete emp.state
+// console.log(emp)
+
+// 8. isCalled() : check whether an object is sealed or not
+// 9. seal() : seal an object present proprties to be used added or delete or but updation can possible.
+
+Object.seal(emp)
+console.log(Object.isSealed(emp))
+emp.email = "abc@gamail.com"
+emp.city = "Faridabad"
+delete emp.state
+console.log(emp)
+
+// 10 Object 
