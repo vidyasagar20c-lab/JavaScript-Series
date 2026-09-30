@@ -318,11 +318,54 @@ var emp = {
 // 8. isCalled() : check whether an object is sealed or not
 // 9. seal() : seal an object present proprties to be used added or delete or but updation can possible.
 
-Object.seal(emp)
-console.log(Object.isSealed(emp))
-emp.email = "abc@gamail.com"
-emp.city = "Faridabad"
-delete emp.state
+// Object.seal(emp)
+// console.log(Object.isSealed(emp))
+// emp.email = "abc@gamail.com"
+// emp.city = "Faridabad"
+// delete emp.state
+// console.log(emp)
+
+// 10 Object.get property Descriptor (object, property) : return description of perticular property
+
+// console.log(Object.getOwnPropertyDescriptor(emp.id))
+// 11
+
+// Object.setPrototypeOf(emp,{
+//     cmp : "Ducat"
+// })
+// console.log(emp)
+
+// 12. Object.get prototypeof (object) : used to get prototype of any object 
+console.log(Object.getprototyoeOf(emp))
+
+// 13. object.is : compare object elements 
+console.log(Object.is(emp,id,1001))
+console.log(Object.is(emp,id,1001)
+)
+
+// 14 Object define property(Object, property, descrpition) : used to set property with details
+
+Object.defineProperties(emp,"email");{
+    value : "shukla2004official@gmail.com"
+    writable : true
+    enumerable : true
+    configurable : true 
+}
+emp.email, "test"
+delete emp.email
 console.log(emp)
 
-// 10 Object 
+// 15 object define propeties(object,{propertyd1}): description1 property2 : description2 }):
+// Used to set property with details 
+
+Object.defineProperties(emp,{
+    email:{
+        value : "shukla2004official@gmail.com",
+        enumerable : true,
+        writable : true,
+        configurable : true
+    }
+})
+
+console.log(emp)
+
