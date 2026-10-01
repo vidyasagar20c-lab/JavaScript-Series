@@ -38,4 +38,19 @@ console.log(emp.size)
 console.log(emp.has('city'))
 console.log(emp.has('address'))
 
-// get()
+// get() return value of particular key, return undefined if no argument is proveded or 
+// key in invalid
+console.log(emp.get("id"))
+console.log(emp.get("name"))
+console.log(emp.get("address"))
+
+/*  values : return an interator containing all value of map
+
+    keys   : return an interator containinf all keys of map
+    
+    entries: return an interator in pair if key value conatining all item of map
+    */
+
+    console.log(emp.keys())
+    console.log(emp.value())
+    console.log(emp.entries())
