@@ -44,39 +44,39 @@ class className{
 */
 
 // class without constructor
-class test{
-    show(){
-        console.log("In Show() of test class")
-    }
-    display(){
-        console.log("In display() of test class")
-    }
-} 
-var obj = new test()
+// class test{
+//     show(){
+//         console.log("In Show() of test class")
+//     }
+//     display(){
+//         console.log("In display() of test class")
+//     }
+// } 
+// var obj = new test()
 
-obj.show()
-obj.display()
+// obj.show()
+// obj.display()
 
-class Add{
-    setData(a,b){
-        this.a = a
-        this.b = b
-        this.sum = a + b
-    }
-    display(){
-        console.log(`${this.a} + ${this.b} = ${this.sum}`)
-    }
-}
-var obj1 = new Add()
-var obj2 = new Add()
-var obj3 = new Add()
+// class Add{
+//     setData(a,b){
+//         this.a = a
+//         this.b = b
+//         this.sum = a + b
+//     }
+//     display(){
+//         console.log(`${this.a} + ${this.b} = ${this.sum}`)
+//     }
+// }
+// var obj1 = new Add()
+// var obj2 = new Add()
+// var obj3 = new Add()
 
-obj1.setData(10,20)
-obj2.setData(100,200)
+// obj1.setData(10,20)
+// obj2.setData(100,200)
 
-obj1.display()
-obj2.display()
-obj3.display()
+// obj1.display()
+// obj2.display()
+// obj3.display()
 
 // 1. Abstraction : Data hinding i.e hiding complexity showing functionality, we can hide members 
 // using access specifices like public, private, and protcted . (javascript doesn't support Abstraction).
@@ -92,3 +92,79 @@ obj3.display()
             // 2.Construtor and distructor
             // we can define user different constructor in javascript but
             // we can't define user defined destructor javascript 
+            // 3. method overriding if both perent class and child having same named 
+            // member then child can in harit only those member from parent 
+            // which child doesn't have JavaScript support this concept.
+            // 4. Operator Overlaoding 
+            // if we  provided user defined defination to an existing operator 
+            // then this concept is called operator overloading JS doesn't 
+            // support this feature 
+
+// 4.Interite fance: it we reuse member of any existing class in a  new class is 
+// called in heritance
+// JS support this concept 
+
+// class with constructor 
+
+// construtctor : 
+// -> a special member method of class which provide memory intilization to a 
+// class object 
+// -> there is no need to call constractor it called automatically when object 
+// is decleared  with help
+// of now 
+
+// -> it can't be paramaterised 
+// -> if we not provided defination to a constructor in class than compiler 
+// (JIT) provided defination to constructor 
+// -> we can't return a user defined  value from a comstructor 
+
+class test{
+    constructor(){
+        console.log("constructor class Test")
+    }
+    show(){
+        console.log("In show() of Test class")
+    }
+    display(){
+        console.log("In display() of Test class")
+    }
+}
+
+var obj1 = new test()
+var obj2 = new test()
+var obj3 = new test()
+
+obj1.show()
+obj1.display()
+
+
+// class test{
+//     show(){
+//         console.log("In Show() of test class")
+//     }
+//     display(){
+//         console.log("In display() of test class")
+//     }
+// } 
+// var obj = new test()
+
+// obj.show()
+// obj.display()
+
+class Add{
+    constructor(a,b){
+        this.a = a
+        this.b = b
+        this.sum = a + b
+    }
+    display(){
+        console.log(`${this.a} + ${this.b} = ${this.sum}`)
+    }
+}
+var obj1 = new Add(10,20)
+var obj2 = new Add(100,200)
+var obj3 = new Add()
+
+obj1.display()
+obj2.display()
+obj3.display()
