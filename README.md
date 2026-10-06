@@ -1,2 +1,0 @@
-# JavaScript-Series
-JavaScript course
