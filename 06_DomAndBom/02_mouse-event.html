@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            width: 50vw;
+            height: 50vh;
+
+            background-color: brown;
+            color:white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main" onmouseover="fun1()" onmouseenter="fun2()" onmouseup="fun3()" onmousedown="fun4()"
+     onclick="fun5()" ondblclick="fun6()" onmousemove="fun7()" onmousewheel="fun8()" onmouseleave="fun9()" onmouseout="fun10()">No Event
+    </div>
+    <script>
+        var main = document.querySelector(".main")
+
+        function fun1(){
+            main.style.background = "yellow";
+            main.style.color = "white";
+            main.innerHTML = "onmouseover event"
+            console.log("onmouseover event is called")
+        }
+        function fun2(){
+            main.style.background = "red";
+            main.style.color = "black";
+            main.innerHTML = "onmouseenter event"
+            console.log("onmouseenter event is called")
+        }
+        function fun3(){
+            main.style.background = "pink";
+            main.style.color = "white";
+            main.innerHTML = "onmouseup event"
+            console.log("onmouseup event is called")
+        }
+        function fun4(){
+            main.style.background = "skyblue";
+            main.style.color = "black";
+            main.innerHTML = "onmousedown event"
+            console.log("onmousedown event is called")
+        }
+        function fun5(){
+            main.style.background = "megenta";
+            main.style.color = "white";
+            main.innerHTML = "onclick event"
+            console.log("onclick event is called")
+        }
+        function fun6(){
+            main.style.background = "blue";
+            main.style.color = "white";
+            main.innerHTML = "ondbclick event"
+            console.log("ondbclick event is called")
+        }
+
+        function fun7(){
+            main.style.background = "navy";
+            main.style.color = "black";
+            main.innerHTML = "onmousemove event"
+            console.log("onmousemove event is called")
+        }
+        function fun8(){
+            main.style.background = "gray";
+            main.style.color = "white";
+            main.innerHTML = "onmousewheel event"
+            console.log("onmousewheel event is called")
+        }function fun9(){
+            main.style.background = "green";
+            main.style.color = "black";
+            main.innerHTML = "onmouseleave event"
+            console.log("onmouseleave event is called")
+        }
+        function fun10(){
+            main.style.background = "yellow-blue";
+            main.style.color = "white";
+            main.innerHTML = "onmouseout event"
+            console.log("onmouseout event is called")
+        }
+
+    </script>
+</body> 
+
+</html>

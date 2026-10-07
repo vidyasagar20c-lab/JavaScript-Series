@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+
+        .main{
+            width: 100vw;
+        }
+        .center{
+            width: 80%;
+            margin: auto;
+        }
+
+        .center h3{
+            background-color: gray;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+        .center input{
+            width: 100%;
+            padding: 10px;
+            margin-bottom:10px ;
+            border: none;
+            border-bottom: 5px solid gray;
+        }
+        .center button{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: gray;
+            color : white;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <h3>Keyword Events </h3>
+            <input type="text" name="name" id="name" placeholder="Full Name" class="sample.example" required minlength="3" maxlength="30"
+             onkeydown="fun1(event)" onkeypress="fun2(event)" onkeyup="fun3(event)">
+             <button onclick="postData(event)">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function fun1(){
+            // console.log(event)
+        }
+        function fun2(){
+            // console.log(event)
+        }
+        function fun3(){
+            // console.log(event)
+            let item = event.target
+            // console.log(item.types)
+            // console.log(item.name)
+            // console.log(item.id)
+            // console.log(item.classList)
+            // console.log(item.reqired)
+            // console.log(item.minLength)
+            // console.log(item.maxLength)
+            // console.log(item.value)
+            // console.log(item.style)
+        
+
+        if(item.value.length<item.minLength || item.value.length>item.maxLength)
+        item.style.borderBottom = "5px solid red"
+    else
+    item.style.borderBottom = "5px solid gray"
+        }
+
+        function postData(event){
+            console.log(`Hello : ${document.getElementById('name').value}`)
+        }
+    </script>
+</body>
+</html>
